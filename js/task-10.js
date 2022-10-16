@@ -1,5 +1,7 @@
 function getRandomHexColor() {
-  return `#${(Math.random().toString(16) + '000000').substring(2,8).toUpperCase()}`;
+  return `#${(Math.random().toString(16) + "000000")
+    .substring(2, 8)
+    .toUpperCase()}`;
 }
 
 let box = document.querySelector("#boxes");
@@ -12,10 +14,7 @@ function createBoxes(amount) {
   let size = 30;
   destroyBoxes();
   for (let i = 1; i <= amount; i += 1) {
-    box.insertAdjacentHTML(
-      "beforeend", 
-      `<div id="${i}"></div>`
-    );
+    box.insertAdjacentHTML("beforeend", `<div id="${i}"></div>`);
     let boxCurrent = document.getElementById(i);
     boxCurrent.style.width = `${size}px`;
     boxCurrent.style.height = `${size}px`;
