@@ -9,5 +9,6 @@ const output = document.querySelector(".color");
 
 buttonColor.addEventListener("click", (event) => {
   let color = getRandomHexColor();
-  output.setAttribute("style", `background-color: ${color}; color: ${color};`);
+  output.textContent = color;
+  document.body.style.backgroundColor = color;
 });
